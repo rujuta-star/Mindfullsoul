@@ -1,0 +1,72 @@
+<div class="container">
+  <!-- Header -->
+  <!-- <header>
+    <h1>StressReliefHub</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Therapies</a>
+    </nav>
+  </header> -->
+
+  <!-- Welcome Section -->
+  <!-- <section class="welcome">
+    <h2>Welcome to StressReliefHub</h2>
+    <p>Find personalized stress relief solutions.</p>
+    <button (click)="predictStress()">Start Questionnaire</button>
+  </section> -->
+
+  <!-- Stress Level Prediction Form -->
+  <section class="form-section">
+    <h2>Stress Level Prediction</h2>
+    <form [formGroup]="predictForm" (ngSubmit)="predictStress()">
+      <div class="input-group" *ngFor="let field of inputFields">
+        <label [for]="field.id">{{ field.label }}</label>
+        <input type="number" [id]="field.id" [formControlName]="field.id" [min]="field.min" [max]="field.max" required>
+      </div>
+      <button type="submit">Predict Stress Level</button>
+    </form>
+  </section>
+
+  <!-- Predicted Stress Level -->
+  <div *ngIf="stressLevel !== null" class="result">
+    <h3>Predicted Stress Level: {{ stressLevel }}</h3>
+  </div>
+
+  <!-- Recommendations Section -->
+  <section class="result" *ngIf="showRecommendations">
+    <h3>Your Stress Level: {{ stressLevel }}</h3>
+    <p>Based on your responses, here are some recommendations:</p>
+
+    <div class="recommendations">
+      <div class="card">
+        <h4>🎵 Music Therapy</h4>
+        <p>Listen to calming sounds to relax your mind.</p>
+        <button>Play Music</button>
+      </div>
+
+      <div class="card">
+        <h4>🧘 Yoga Therapy</h4>
+        <p>Try simple yoga poses to reduce stress.</p>
+        <button>Start Yoga</button>
+      </div>
+
+      <div class="card">
+        <h4>🧘‍♂️ Meditation</h4>
+        <p>Guided meditation can help with relaxation.</p>
+        <button>Start Meditation</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+

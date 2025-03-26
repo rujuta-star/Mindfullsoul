@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | StressReliefHub</title>
+
+    <!-- Bootstrap & FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./dashboard.component.css">
+</head>
+
+<body>
+    
+    <!-- Navbar -->
+   
+  <header> 
+    
+    <img src="assets/images/logo.png" alt="" style="width: 5%; height: 5%;">
+    <nav class="navigation"> 
+        <a href="#" class="active">Home</a> 
+        <a href="#">About</a> 
+        <a href="#">Service</a> 
+        <a href="#">Contact</a> 
+    </nav> 
+    <button (click)="navigateToLogin()" class="login-btn">Log In</button>
+    <button (click)="navigateToAbout()" class="about-btn">About</button>
+
+ </header>
+
+   <!-- Parallax Section -->
+   <!-- Parallax Section --> 
+<section class="parallax"> 
+  <img src="./assets/images/hill1.png" id="hill1"> 
+  <img src="./assets/images/hill2.png" id="hill2"> 
+  <img src="./assets/images/hill3.png" id="hill3"> 
+  <img src="./assets/images/hill4.png" id="hill4"> 
+  <img src="./assets/images/hill5.png" id="hill5"> 
+  <img src="./assets/images/tree.png" id="tree"> 
+  <h2 id="text">Mindfull Soul</h2> 
+  <img src="./assets/images/leaf.png" id="leaf"> 
+  <img src="./assets/images/plant.png" id="plant"> 
+</section> 
+<section class="sec"> 
+  <!-- <h2>soulfull mind</h2>  -->
+</section> 
+<script src="script.js"></script>
+
+
+
+    <!-- What We Offer -->
+    <section class="content-section">
+        <div class="container row mx-auto shadow">
+            <div class="col-lg-6 p-5 bg-white">
+                <h2>What We Offer</h2>
+                <p><strong>Personalized Stress Management:</strong> Our platform tailors stress relief techniques based on individual responses.</p>
+                <p><strong>Guided Therapy Sessions:</strong> Access meditation, breathing exercises, yoga, and music therapy.</p>
+                <p><strong>Interactive Self-Help Resources:</strong> Explore self-help tools, articles, and expert-curated resources.</p>
+                <p><strong>24/7 Accessibility:</strong> Our AI-powered services are available anytime, anywhere.</p>
+            </div>
+            <div class="col-lg-6 p-3 bg-purple">
+                <p class="text-white">Explore AI Counseling</p>
+                <img src="assets/images/roadmap1.webp" class="w-100" alt="Roadmap">
+            </div>
+        </div>
+    </section>
+
+    <!-- Self-Help Resources -->
+
+    <section class="content-section parallax2">
+      
+        <!-- <h2>Welcome to StressReliefHub</h2> -->
+        <p>Find personalized stress relief solutions.</p>
+        <button (click)="predictStress()">Start Questionnaire</button>
+      
+        <h2 class="text-center text-white">Some Self-Help Resources</h2>
+        <div class="card-container">
+            <div class="card">
+                <h2>Meditation</h2>
+                <p>Practice mindfulness and relaxation techniques.</p>
+                <img src="assets/images/meditation.jpg" alt="Meditation">
+            </div>
+            <div class="card">
+                <h2>Breathing Exercises</h2>
+                <p>Follow guided breathing exercises to reduce stress.</p>
+                <img src="assets/images/breathing.jpg" alt="Breathing Exercises">
+            </div>
+            <div class="card">
+                <h2>Music Therapy</h2>
+                <p>Listen to calming music and relax.</p>
+                <img src="assets/images/music.webp" alt="Music Therapy">
+            </div>
+            <div class="card">
+                <h2>Yoga</h2>
+                <p>Follow guided yoga exercises.</p>
+                <img src="assets/images/yoga.avif" alt="Yoga">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

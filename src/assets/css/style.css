@@ -1,0 +1,284 @@
+/* Index 1 css starts here */
+body {
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+    background-color: rgb(237, 209, 255);
+}
+
+.headercss {
+    /* height: 3.3rem; */
+    height: 10vh;
+    width: 100%;
+    /* background-color: rgb(137, 46, 137); */
+    background-color: #52237f;
+    z-index: 1;
+}
+
+.body1 {
+    height: 90vh;
+    /* background-color: white; */
+    /* border-top-left-radius: 5px; */
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: rgb(237, 209, 255);
+}
+
+.body1a {
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.body1b {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.body1c {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.body2 {
+    height: 83vh;
+}
+
+.body2b {
+    background: grey;
+}
+
+.body3 {
+    height: 92vh;
+    width: 201.5vh;
+}
+
+.body3a2img {
+    height: 80%;
+    width: 80%;
+}
+
+/* .body4{
+    height: 85vh;
+} */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/* Footer */
+.wholefooter {
+    background: linear-gradient(to right, #16011f 8%, #8b00e8 100%);
+    z-index: 1;
+    height: 450px;
+}
+
+.bgfoot {
+    position: absolute;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.footer {
+    position: relative;
+}
+
+
+
+.mainfooter2 {
+    background: linear-gradient(119.54deg, rgba(1, 1, 11, 0.99), rgba(0, 0, 70, .6));
+    position: relative;
+    bottom: 0;
+    /* height: 40px; */
+    height: 22%;
+}
+
+.mainfooter2left {
+    left: 0;
+}
+
+.mainfooter2right {
+    right: 0;
+}
+
+.borderfoot {
+    border-width: 2px;
+    border-style: solid;
+}
+
+/* Social Media Icons */
+
+.fa {
+    padding: 7px;
+    font-size: 30px;
+    width: -22px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa-facebook {
+    background: white;
+    color: #3B5998;
+}
+
+.fa-twitter {
+    background: white;
+    color: #55ACEE;
+}
+
+.fa-linkedin {
+    background: white;
+    color: #007bb5;
+}
+
+.fa-youtube {
+    background: white;
+    color: #bb0000
+}
+
+.fa-instagram {
+    background: white;
+    color: #125688;
+}
+
+/* Social Media Complete  */
+.parafoot {
+    font-size: 0.8rem !important;
+}
+
+.bolderfoot {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.smallfoot {
+    font-size: 14px;
+    padding-bottom: 12PX;
+}
+
+.smallfoot1 {
+    font-size: 14px;
+    /* padding-bottom: 12PX; */
+}
+
+.boldsmallfoot {
+    font-weight: 600;
+}
+
+.selecttag {
+    height: 34px;
+    width: 276px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+}
+
+.footerhead {
+    padding-top: 15px;
+}
+
+.footlinker3 {
+    padding-top: 12px;
+}
+
+.footlinker4 {
+    padding-top: 0px;
+}
+
+/* index 1 ends here */
+
+
+/* index 2 starts here */
+.index2{
+    height: 1700px;
+}
+.signup_background{
+    background-color: rgb(237, 209, 255);
+}
+/* index 2 ends here */
+
+
+/* index3 starts here */
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    
+    .gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #a1c4fd;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: -webkit-linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1)); */
+    background-color: rgb(237, 209, 255);
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1)) */
+    background-color: rgb(237, 209, 255);
+    }
+    
+    .bg-purple {
+    background-color: #52237f;
+    }
+    @media (min-width: 992px) {
+    .card-registration-2 .bg-purple {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+    @media (max-width: 991px) {
+    .card-registration-2 .bg-purple {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+    /* index 3 ends here */
+
+
+    /* body_startup test css starts here*/
+
+    .body_startup_test{
+        height: 82vh;
+          
+    }
