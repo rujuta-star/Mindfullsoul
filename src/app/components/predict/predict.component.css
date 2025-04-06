@@ -1,103 +1,192 @@
-/* General Styles */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #b8e9dd, #f6fdfd);
+  color: #333;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+.background img {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.cloud {
+  width: 150px;
+  animation: floatClouds 60s linear infinite;
+}
+
+.cloud1 {
+  top: 50px;
+  left: -200px;
+  animation-delay: 0s;
+}
+
+.cloud2 {
+  top: 120px;
+  left: -300px;
+  animation-delay: 20s;
+}
+
+.leaf {
+  width: 50px;
+  animation: floatLeaves 12s ease-in-out infinite;
+}
+
+.leaf1 {
+  top: 300px;
+  left: 100px;
+}
+
+.leaf2 {
+  top: 600px;
+  left: 70%;
+}
+
+/* Animations */
+@keyframes floatClouds {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(120vw); }
+}
+
+@keyframes floatLeaves {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(-10deg); }
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+.background img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+/* Form Section */
+.form-section {
+  background: #ffffffdd;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 40px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1s ease-in;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button[type="submit"],
+.card button {
+  background-color: #27a69a;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e8279;
+}
+
+/* Recommendations */
+.recommendations {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #ffffffcc;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1 1 30%;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.result {
+  margin-top: 30px;
+}
+.meditation-box {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.breathe-animation {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  border-radius: 50%;
+  background-color: #9ad3bc;
+  animation: breathe 4s infinite;
+}
+
+@keyframes breathe {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.5); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #007bff;
-    padding: 15px;
-    color: white;
-  }
-  
-  nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* Welcome Section */
-  .welcome {
-    margin: 20px 0;
-  }
-  
-  .welcome button {
-    background-color: #28a745;
-    border: none;
-    padding: 10px 15px;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  /* Form Section */
-  .form-section {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-  }
-  
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    text-align: left;
-  }
-  
-  .input-group label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .input-group input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button[type="submit"] {
-    background-color: #007bff;
-    border: none;
-    padding: 10px 15px;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  /* Recommendations */
-  .recommendations {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .card {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 30%;
-  }
-  
-  .card button {
-    background-color: #007bff;
-    border: none;
-    padding: 8px 12px;
-    color: white;
-    cursor: pointer;
-  }
-  
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-in;
+}
