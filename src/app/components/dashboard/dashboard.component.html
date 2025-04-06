@@ -25,56 +25,78 @@
         <a href="#">About</a> 
         <a href="#">Service</a> 
         <a href="#">Contact</a> 
-    </nav> 
+    </nav>
     <button (click)="navigateToLogin()" class="login-btn">Log In</button>
-    <button (click)="navigateToAbout()" class="about-btn">About</button>
 
  </header>
 
    <!-- Parallax Section -->
    <!-- Parallax Section --> 
-<section class="parallax"> 
-  <img src="./assets/images/hill1.png" id="hill1"> 
-  <img src="./assets/images/hill2.png" id="hill2"> 
-  <img src="./assets/images/hill3.png" id="hill3"> 
-  <img src="./assets/images/hill4.png" id="hill4"> 
-  <img src="./assets/images/hill5.png" id="hill5"> 
-  <img src="./assets/images/tree.png" id="tree"> 
-  <h2 id="text">Mindfull Soul</h2> 
-  <img src="./assets/images/leaf.png" id="leaf"> 
-  <img src="./assets/images/plant.png" id="plant"> 
-</section> 
+   <section class="parallax">
+    <img src="./assets/images/hill1.png" id="hill1">
+    <img src="./assets/images/hill2.png" id="hill2">
+    <img src="./assets/images/hill3.png" id="hill3">
+    <img src="./assets/images/hill4.png" id="hill4">
+    <img src="./assets/images/hill5.png" id="hill5">
+    <img src="./assets/images/tree.png" id="tree">
+    <h2 id="text">Mindful Soul</h2>
+    <img src="./assets/images/leaf.png" id="leaf">
+    <img src="./assets/images/plant.png" id="plant">
+  </section>
 <section class="sec"> 
   <!-- <h2>soulfull mind</h2>  -->
 </section> 
-<script src="script.js"></script>
+
 
 
 
     <!-- What We Offer -->
-    <section class="content-section">
-        <div class="container row mx-auto shadow">
+    <section class="content-section py-5">
+        <div class="container shadow rounded overflow-hidden">
+          <div class="row g-0">
+            <!-- Left Content -->
             <div class="col-lg-6 p-5 bg-white">
-                <h2>What We Offer</h2>
-                <p><strong>Personalized Stress Management:</strong> Our platform tailors stress relief techniques based on individual responses.</p>
-                <p><strong>Guided Therapy Sessions:</strong> Access meditation, breathing exercises, yoga, and music therapy.</p>
-                <p><strong>Interactive Self-Help Resources:</strong> Explore self-help tools, articles, and expert-curated resources.</p>
-                <p><strong>24/7 Accessibility:</strong> Our AI-powered services are available anytime, anywhere.</p>
+                <h2 class="mb-4 fs-2">What We Offer</h2>
+                <p class="mb-4 fs-5"><strong>Personalized Stress Management:</strong> Our platform tailors stress relief techniques based on individual responses.</p>
+                <p class="mb-4 fs-5"><strong>Guided Therapy Sessions:</strong> Access meditation, breathing exercises, yoga, and music therapy.</p>
+                <p class="mb-4 fs-5"><strong>Interactive Self-Help Resources:</strong> Explore self-help tools, articles, and expert-curated resources.</p>
+                <p class="mb-4 fs-5"><strong>24/7 Accessibility:</strong> Our AI-powered services are available anytime, anywhere.</p>
             </div>
-            <div class="col-lg-6 p-3 bg-purple">
-                <p class="text-white">Explore AI Counseling</p>
-                <img src="assets/images/roadmap1.webp" class="w-100" alt="Roadmap">
+              
+              
+      
+            <!-- Right Image & Call -->
+            <div class="col-lg-6 p-4 bg-purple d-flex flex-column justify-content-center align-items-center">
+              <p class="text-white h5 mb-3">Explore AI Counseling</p>
+              <img src="assets/images/roadmap1.webp" class="img-fluid rounded" alt="Roadmap">
             </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
 
     <!-- Self-Help Resources -->
 
     <section class="content-section parallax2">
       
         <!-- <h2>Welcome to StressReliefHub</h2> -->
-        <p>Find personalized stress relief solutions.</p>
-        <button (click)="predictStress()">Start Questionnaire</button>
+         <style>
+  button:active {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+  }
+</style>
+        <div class="text-center my-5">
+            <p class="fs-4 fw-semibold text-dark mb-4">Find personalized stress relief solutions.</p>
+            <button 
+              (click)="predictStress()" 
+              class="btn btn-lg btn-primary px-4 py-2 rounded-pill shadow"
+              style="background: linear-gradient(135deg, #38b9d3 0%, #49bd7f 100%); border: none;"
+            >
+              Start Questionnaire
+            </button>
+          </div>
+          
       
         <h2 class="text-center text-white">Some Self-Help Resources</h2>
         <div class="card-container">
@@ -100,6 +122,7 @@
             </div>
         </div>
     </section>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
