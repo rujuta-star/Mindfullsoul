@@ -38,6 +38,12 @@ export class PredictComponent {
       }, {} as { [key: string]: any })
     );
   }
+  playMusic() {
+    const audio = document.getElementById('calmMusic') as HTMLAudioElement;
+    audio.play();
+  }
+  showYoga = false;
+  showMeditation = false;
 
   predictStress() {
     if (this.predictForm.valid) {
