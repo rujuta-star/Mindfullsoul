@@ -1,72 +1,72 @@
-<div class="container">
-  <!-- Header -->
-  <!-- <header>
-    <h1>StressReliefHub</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Therapies</a>
-    </nav>
-  </header> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stress Relief Hub</title>
+  
+</head>
+<body>
 
-  <!-- Welcome Section -->
-  <!-- <section class="welcome">
-    <h2>Welcome to StressReliefHub</h2>
-    <p>Find personalized stress relief solutions.</p>
-    <button (click)="predictStress()">Start Questionnaire</button>
-  </section> -->
+  <div class="background">
+    <img src="assets/images/hill1.png" id="hill1">
+<img src="assets/images/hill2.png" id="hill2">
+<img src="assets/images/hill3.png" id="hill3">
+<img src="assets/images/hill4.png" id="hill4">
+<img src="assets/images/hill5.png" id="hill5">
 
-  <!-- Stress Level Prediction Form -->
-  <section class="form-section">
-    <h2>Stress Level Prediction</h2>
-    <form [formGroup]="predictForm" (ngSubmit)="predictStress()">
-      <div class="input-group" *ngFor="let field of inputFields">
-        <label [for]="field.id">{{ field.label }}</label>
-        <input type="number" [id]="field.id" [formControlName]="field.id" [min]="field.min" [max]="field.max" required>
-      </div>
-      <button type="submit">Predict Stress Level</button>
-    </form>
-  </section>
-
-  <!-- Predicted Stress Level -->
-  <div *ngIf="stressLevel !== null" class="result">
-    <h3>Predicted Stress Level: {{ stressLevel }}</h3>
   </div>
 
-  <!-- Recommendations Section -->
-  <section class="result" *ngIf="showRecommendations">
-    <h3>Your Stress Level: {{ stressLevel }}</h3>
-    <p>Based on your responses, here are some recommendations:</p>
+  <div class="container">
+    <section class="form-section">
+      <h2>🌿 Stress Level Prediction</h2>
+      <form [formGroup]="predictForm" (ngSubmit)="predictStress()">
+        <div class="input-group" *ngFor="let field of inputFields">
+          <label [for]="field.id">{{ field.label }}</label>
+          <input type="number" [id]="field.id" [formControlName]="field.id" [min]="field.min" [max]="field.max" required>
+        </div>
+        <button type="submit">Predict Stress Level</button>
+      </form>
+    </section>
 
-    <div class="recommendations">
-      <div class="card">
-        <h4>🎵 Music Therapy</h4>
-        <p>Listen to calming sounds to relax your mind.</p>
-        <button>Play Music</button>
-      </div>
-
-      <div class="card">
-        <h4>🧘 Yoga Therapy</h4>
-        <p>Try simple yoga poses to reduce stress.</p>
-        <button>Start Yoga</button>
-      </div>
-
-      <div class="card">
-        <h4>🧘‍♂️ Meditation</h4>
-        <p>Guided meditation can help with relaxation.</p>
-        <button>Start Meditation</button>
-      </div>
+    <div *ngIf="stressLevel !== null" class="result fade-in">
+      <h3>Predicted Stress Level: {{ stressLevel }}</h3>
     </div>
-  </section>
-</div>
 
+    <section class="result fade-in" *ngIf="showRecommendations">
+      <h3>Your Stress Level: {{ stressLevel }}</h3>
+      <p>Based on your responses, here are some recommendations:</p>
 
+      <div class="recommendations">
+        <div class="card">
+          <h4>🎵 Music Therapy</h4>
+          <p>Listen to calming sounds to relax your mind.</p>
+          <button (click)="playMusic()">Play Music</button>
+          <audio id="calmMusic" src="assets/calm_music.mp3"></audio>
+        </div>
+        <div class="card">
+          <h4>🧘 Yoga Therapy</h4>
+          <p>Try simple yoga poses to reduce stress.</p>
+          <button (click)="showYoga = !showYoga">Start Yoga</button>
+          <video *ngIf="showYoga" width="320" height="240" controls>
+            <source src="assets/yoga.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="card">
+          <h4>🧘‍♂️ Meditation</h4>
+          <p>Guided meditation can help with relaxation.</p>
+          <button>Start Meditation</button>
+          <div *ngIf="showMeditation" class="meditation-box">
+            <p>🧘 Close your eyes. Inhale... Hold... Exhale...</p>
+            <div class="breathe-animation"></div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </div>
 
-
-
-
-
-
-
-
+  <script src="script.js"></script>
+</body>
+</html>
