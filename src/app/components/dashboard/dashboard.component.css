@@ -4,6 +4,8 @@
   transition: 0.1s ease-out; /* Smooth animation */
 }
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -58,6 +60,8 @@ header {
 
 
 
+
+
 .navigation a {
   text-decoration: none;
   color: #359381;
@@ -85,6 +89,9 @@ header {
   justify-content: center;
   text-align: center;
   color: white;
+}
+.parallax h2 {
+  position: absolute;
 }
 
 #text {
@@ -120,7 +127,7 @@ header {
 /* Self-Help Resources Parallax */
 .parallax2 {
   background-image: url('/assets/images/plant.png');
-  height: 60vh;
+  height: 80vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
